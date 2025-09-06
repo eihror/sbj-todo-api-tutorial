@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:17.6-alpine3.22 # Change this to match you postgres server version
+    restart: always
+    container_name: todo-api-tutorial-db
+    environment:
+      - POSTGRES_DB=todo_api_tutorial_db
+      - POSTGRES_PASSWORD=qwerqwer
+      - POSTGRES_USER=eihror
+    ports:
+      - '5432:5432'
